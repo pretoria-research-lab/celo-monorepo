@@ -1,4 +1,5 @@
 import { normalizeAddressWith0x, privateKeyToAddress } from '@celo/utils/lib/address'
+import { Address } from '../base'
 import { LocalSigner } from './signers/local-signer'
 import { Wallet, WalletBase } from './wallet'
 
@@ -15,5 +16,13 @@ export class LocalWallet extends WalletBase implements Wallet {
       return
     }
     this.addSigner(accountAddress, new LocalSigner(privateKey))
+  }
+
+  /**
+   * Remove the account
+   * @param address Adddress of the account to remove
+   */
+  removeAccount(address: Address) {
+    this.removeSigner(address)
   }
 }
