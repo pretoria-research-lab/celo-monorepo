@@ -21,6 +21,7 @@ interface NetworkConfig {
   pgpnpUrl: string // Phone Number Privacy service url
   pgpnpPubKey: string
   signMoonpayUrl: string
+  dynamicLinkDomain: string
 }
 
 const pgpnpUrlStaging = 'https://us-central1-celo-phone-number-privacy-stg.cloudfunctions.net'
@@ -31,6 +32,8 @@ const signMoonpayUrlStaging =
   'https://us-central1-celo-org-mobile.cloudfunctions.net/signMoonpayStaging'
 const signMoonpayUrlProd =
   'https://us-central1-celo-mobile-mainnet.cloudfunctions.net/signMoonpayProd'
+const dynamicLinkDomainStaging = 'https://l.celo.org'
+const dynamicLinkDomainMainnet = 'https://l.valoraapp.com'
 
 const networkConfigs: { [testnet: string]: NetworkConfig } = {
   [Testnets.integration]: {
@@ -41,6 +44,7 @@ const networkConfigs: { [testnet: string]: NetworkConfig } = {
     pgpnpUrl: pgpnpUrlStaging,
     pgpnpPubKey: pgpnpPubKeyStaging,
     signMoonpayUrl: signMoonpayUrlStaging,
+    dynamicLinkDomain: '',
   },
   [Testnets.alfajoresstaging]: {
     nodeDir: `.${Testnets.alfajoresstaging}`,
@@ -50,6 +54,7 @@ const networkConfigs: { [testnet: string]: NetworkConfig } = {
     pgpnpUrl: pgpnpUrlStaging,
     pgpnpPubKey: pgpnpPubKeyStaging,
     signMoonpayUrl: signMoonpayUrlStaging,
+    dynamicLinkDomain: dynamicLinkDomainStaging,
   },
   [Testnets.alfajores]: {
     nodeDir: `.${Testnets.alfajores}`,
@@ -60,6 +65,7 @@ const networkConfigs: { [testnet: string]: NetworkConfig } = {
     pgpnpPubKey:
       'kPoRxWdEdZ/Nd3uQnp3FJFs54zuiS+ksqvOm9x8vY6KHPG8jrfqysvIRU0wtqYsBKA7SoAsICMBv8C/Fb2ZpDOqhSqvr/sZbZoHmQfvbqrzbtDIPvUIrHgRS0ydJCMsA',
     signMoonpayUrl: signMoonpayUrlStaging,
+    dynamicLinkDomain: dynamicLinkDomainStaging,
   },
   [Testnets.pilot]: {
     nodeDir: `.${Testnets.pilot}`,
@@ -69,6 +75,7 @@ const networkConfigs: { [testnet: string]: NetworkConfig } = {
     pgpnpUrl: pgpnpUrlStaging,
     pgpnpPubKey: pgpnpPubKeyStaging,
     signMoonpayUrl: signMoonpayUrlStaging,
+    dynamicLinkDomain: dynamicLinkDomainStaging,
   },
   [Testnets.pilotstaging]: {
     nodeDir: `.${Testnets.pilotstaging}`,
@@ -78,6 +85,7 @@ const networkConfigs: { [testnet: string]: NetworkConfig } = {
     pgpnpUrl: pgpnpUrlStaging,
     pgpnpPubKey: pgpnpPubKeyStaging,
     signMoonpayUrl: signMoonpayUrlStaging,
+    dynamicLinkDomain: dynamicLinkDomainStaging,
   },
   [Testnets.baklavastaging]: {
     nodeDir: `.${Testnets.baklavastaging}`,
@@ -87,6 +95,7 @@ const networkConfigs: { [testnet: string]: NetworkConfig } = {
     pgpnpUrl: pgpnpUrlStaging,
     pgpnpPubKey: pgpnpPubKeyStaging,
     signMoonpayUrl: signMoonpayUrlStaging,
+    dynamicLinkDomain: dynamicLinkDomainStaging,
   },
   [Testnets.baklava]: {
     nodeDir: `.${Testnets.baklava}`,
@@ -96,6 +105,7 @@ const networkConfigs: { [testnet: string]: NetworkConfig } = {
     pgpnpUrl: pgpnpUrlStaging,
     pgpnpPubKey: pgpnpPubKeyStaging,
     signMoonpayUrl: signMoonpayUrlStaging,
+    dynamicLinkDomain: dynamicLinkDomainStaging,
   },
   [Testnets.mainnet]: {
     nodeDir: `.${Testnets.mainnet}`,
@@ -106,6 +116,7 @@ const networkConfigs: { [testnet: string]: NetworkConfig } = {
     pgpnpPubKey:
       'FvreHfLmhBjwxHxsxeyrcOLtSonC9j7K3WrS4QapYsQH6LdaDTaNGmnlQMfFY04Bp/K4wAvqQwO9/bqPVCKf8Ze8OZo8Frmog4JY4xAiwrsqOXxug11+htjEe1pj4uMA',
     signMoonpayUrl: signMoonpayUrlProd,
+    dynamicLinkDomain: dynamicLinkDomainMainnet,
   },
 }
 
